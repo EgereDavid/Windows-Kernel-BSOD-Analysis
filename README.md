@@ -9,7 +9,7 @@
 
 ## 1. EXECUTIVE SUMMARY
 This project documents the end-to-end diagnosis and resolution of a critical system instability issue (Blue Screen of Death) affecting a production workstation. The system was experiencing unexpected shutdowns with the error code **IRQL_NOT_LESS_OR_EQUAL**.
-![BSOD](BSOD)
+![BSOD](BSOD.png)
 
 By leveraging system logs, crash dump analysis tools, and hardware device verification, the root cause was identified as a conflict between the **OS Kernel** and **unmanaged motherboard drivers**. The issue was resolved by deploying specific OEM drivers for the Intel Dynamic Platform and Thermal Framework.
 
@@ -84,3 +84,7 @@ To ensure system stability, I executed a multi-tiered driver deployment strategy
 * **Forensic Analysis:** Interpreting Hex codes (`0x0000000a`) and memory dump files.
 * **System Administration:** Utilizing Event Viewer, SFC, and Memory Diagnostic tools.
 * **Hardware Troubleshooting:** Identifying unknown hardware IDs and resolving driver dependencies.
+
+## HOW TO SOLVE SIMILAR BSOD RECURRING ISSUE
+To resolve system instability, start by opening** Event Viewer** to examine the system logs from the moment of the crash. If the logs are unclear, use **BlueScreenView** to analyze the system's **minidump files**. Pay close attention to the 'Caused By Driver' field and copy the bug check code. Use an AI tool or technical documentation to decode the error, then verify the hardware status in Device Manager. Finally, download the correct driver, install it, and restart your system to restore full functionality
+LEAVE A HEART IF THIS INFO WAS HELPFUL..
