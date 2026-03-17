@@ -9,6 +9,7 @@
 
 ## 1. EXECUTIVE SUMMARY
 This project documents the end-to-end diagnosis and resolution of a critical system instability issue (Blue Screen of Death) affecting a production workstation. The system was experiencing unexpected shutdowns with the error code **IRQL_NOT_LESS_OR_EQUAL**.
+![BSOD](BSOD)
 
 By leveraging system logs, crash dump analysis tools, and hardware device verification, the root cause was identified as a conflict between the **OS Kernel** and **unmanaged motherboard drivers**. The issue was resolved by deploying specific OEM drivers for the Intel Dynamic Platform and Thermal Framework.
 
